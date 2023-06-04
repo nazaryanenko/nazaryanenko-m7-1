@@ -1,5 +1,5 @@
 resource "aws_instance" "ec2-server" {
-  ami                    = data.aws_ami.ubuntu-ami.id
+  ami                    = data.aws_ami.latest_ubuntu.id
   instance_type          = "t2.micro"
   vpc_security_group_ids = [var.vpc_security_group_id]
 
